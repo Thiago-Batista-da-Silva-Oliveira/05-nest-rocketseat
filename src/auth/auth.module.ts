@@ -11,7 +11,6 @@ import { JwtStrategy } from "./jwt.stategy";
        global: true,
        useFactory(config: ConfigService<Env, true>){
         const privateKey = config.get('JWT_PRIVATE_KEY', { infer: true });
-        console.log('privateKey', privateKey);
         const publicKey = config.get('JWT_PUBLIC_KEY', { infer: true });
         return {
             privateKey: Buffer.from(privateKey, 'base64'),
