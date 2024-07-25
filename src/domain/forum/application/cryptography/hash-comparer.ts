@@ -1,3 +1,3 @@
-export abstract class HasheComparer {
+export abstract class HashComparer {
     abstract compare(plaintext: string, digest: string): Promise<boolean>
 }
