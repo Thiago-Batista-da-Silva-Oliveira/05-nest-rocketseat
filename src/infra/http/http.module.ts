@@ -9,6 +9,7 @@ import { FetchRecentQuestionsUseCase } from "@/domain/forum/application/use-case
 import { CryptographyModule } from "../cryptography/cryptography.module";
 import { RegisterStudentUseCase } from "@/domain/forum/application/use-cases/register-student";
 import { AuthenticateStudentUseCase } from "@/domain/forum/application/use-cases/authenticate-student";
+import { GetQuestionBySlugUseCase } from "@/domain/forum/application/use-cases/get-question-by-slug";
 
 @Module({
   imports: [DatabaseModule, CryptographyModule],
@@ -23,6 +24,7 @@ import { AuthenticateStudentUseCase } from "@/domain/forum/application/use-cases
     FetchRecentQuestionsUseCase,
     RegisterStudentUseCase,
     AuthenticateStudentUseCase,
+    GetQuestionBySlugUseCase,
   ],
 })
 export class HttpModule {}
